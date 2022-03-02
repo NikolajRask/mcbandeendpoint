@@ -34,6 +34,7 @@ app.get('/bande/:name', (req,res) => {
             if (bander[name]) {
                 res.status(200).send(bander[name])
             } else {
+                console.log(bander)
                 res.status(404).send({status: 404, message: "Banden eksisterer ikke"})
             }
         } else {
